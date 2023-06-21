@@ -1,23 +1,38 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import { View, Text, Image, ScrollView, TextInput } from 'react-native';
 
-export default function App() {
+const Pokemon = () => {
   return (
-    <View style={styles.container}>
-      <Text>Hello World</Text>
-      <StatusBar style="auto" />
-    </View>
+    <ScrollView>
+      <View>
+        <Text
+          style={{
+            fontSize: 45,
+            alignSelf: "center",
+            color: "blue",
+          }}
+        >
+          Sacudos Bet 
+        </Text>
+        <Image
+          source={{
+            uri: 'https://pbs.twimg.com/media/E4sYypaVgAQ1Cv9.png',
+          }}
+          style={{ width: 200, height: 210, alignSelf: "center" }}
+        />
+      </View>
+      <TextInput
+        style={{
+          height: 40,
+          borderColor: 'gray',
+          borderWidth: 1, 
+          padding: 5,
+          margin: 15,
+        }}
+        defaultValue="Digite aquiii!"
+      />
+    </ScrollView>
   );
 }
 
-
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#000',
-    alignItems: 'center',
-    justifyContent: 'center',
-
-  },
-});
+export default Pokemon;
